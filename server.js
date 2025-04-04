@@ -19,3 +19,6 @@ app.post('/login', (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
